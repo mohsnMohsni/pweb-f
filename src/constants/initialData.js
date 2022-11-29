@@ -5,8 +5,8 @@
 
 export const fonts = {
   fa: {
-    title: 'Vazir Bold',
-    text: 'Vazir',
-    textLight: 'Vazir Light',
+    title: 'pacifico',
+    text: 'pacifico',
+    textLight: 'pacifico',
   },
 };

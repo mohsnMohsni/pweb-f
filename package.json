@@ -4,7 +4,7 @@
   "scripts": {
     "build": "cross-env NODE_ENV=production NODE_OPTIONS=--max_old_space_size=4096 next build",
     "build:clean": "rimraf .next && yarn build",
-    "dev": "next -p 19006",
+    "dev": "next -p 3000",
     "deploy": "git push material-ui-docs next:next",
     "export": "rimraf docs/export && next export --threads=3 -o export && yarn build-sw",
     "start": "next start"
