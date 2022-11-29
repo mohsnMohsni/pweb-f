@@ -4,4 +4,4 @@ services:
   nextjs:
     build: .
     ports:
-      - "0:0:0:0:5060:3000"
+      - 3000:3000
