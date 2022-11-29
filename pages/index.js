@@ -11,7 +11,7 @@ export default function Home() {
         <link rel="icon" href="/static/images/favicon-16x16.ico" />
       </Head>
 
-      <main>
+      <main className='container'>
         <Typography variant='h1' className='homeTitle' >Mohsen Mohseni</Typography>
       </main>
 

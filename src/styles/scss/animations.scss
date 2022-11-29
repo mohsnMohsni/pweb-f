@@ -1,9 +1,12 @@
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
 .homeTitle{
-	width: 43%;
-	position: absolute;
-	top: 50%;
-	left: 57%;
-	transform: translate(-50%, -50%);
+	width: 75%;
 	color: rgba(255, 255, 255, .1);
 	background: linear-gradient(
 		to right,
@@ -19,7 +22,7 @@
 	background-size: 400%;
 	-webkit-background-clip: text;
 	font-weight: 900;
-	font-size: 500%;
+	font-size: 10vw;
 	animation: rgbTransition 10s linear infinite;
 }
 

@@ -47,7 +47,7 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta name="description" content={SITE_DESCRIPTION} />
           <meta name="author" content={SITE_AUTHOR} />
-          <link rel="icon" href="/static/images/Logo.svg" />
+          <link rel="icon" href="/static/images/favicon-16x16.ico" />
           <link href="https://fonts.gstatic.com" rel="preconnect" crossOrigin="anonymous" />
         </Head>
         <body>
