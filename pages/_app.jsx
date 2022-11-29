@@ -25,6 +25,14 @@ function AppWrapper({ Component, pageProps }) {
     if (jssStyles) {
       jssStyles?.parentElement?.removeChild(jssStyles);
     }
+    console.log(`
+      ███╗   ███╗ ██████╗ ██╗  ██╗███████╗███████╗███╗   ██╗
+      ████╗ ████║██╔═══██╗██║  ██║██╔════╝██╔════╝████╗  ██║
+      ██╔████╔██║██║   ██║███████║███████╗█████╗  ██╔██╗ ██║
+      ██║╚██╔╝██║██║   ██║██╔══██║╚════██║██╔══╝  ██║╚██╗██║
+      ██║ ╚═╝ ██║╚██████╔╝██║  ██║███████║███████╗██║ ╚████║
+      ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝
+    `);
   }, []);
   const settings = useSelector((state) => state.settings);
   const [theme, setTheme] = useState(createCustomTheme(settings.theme));
@@ -32,15 +40,6 @@ function AppWrapper({ Component, pageProps }) {
     const rawTheme = createCustomTheme(settings.theme);
     setTheme(rawTheme);
   }, [settings.theme]);
-
-  console.log(`
-    ███╗   ███╗ ██████╗ ██╗  ██╗███████╗███████╗███╗   ██╗
-    ████╗ ████║██╔═══██╗██║  ██║██╔════╝██╔════╝████╗  ██║
-    ██╔████╔██║██║   ██║███████║███████╗█████╗  ██╔██╗ ██║
-    ██║╚██╔╝██║██║   ██║██╔══██║╚════██║██╔══╝  ██║╚██╗██║
-    ██║ ╚═╝ ██║╚██████╔╝██║  ██║███████║███████╗██║ ╚████║
-    ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝
-  `);
 
   return(
       <>
