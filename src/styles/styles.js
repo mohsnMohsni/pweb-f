@@ -823,7 +823,7 @@ export const createCustomTheme = (t) => {
   let themeOptions = t === "DARK" ? DARKThemesOptions : LIGHTThemesOptions;
 
   if (!themeOptions) {
-    themeOptions = themeOptions["LIGHT"];
+    themeOptions = themeOptions["DARK"];
   }
   let theme = createTheme(merge({}, baseOptions, themeOptions));
 

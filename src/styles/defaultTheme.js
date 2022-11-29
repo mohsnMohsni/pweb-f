@@ -93,7 +93,7 @@ export const defaultTheme = {
     },
     background: {
       light: { default: '#FFFFFF', paper: '#FAFAFA' },
-      dark: { default: '#1E1A3D', paper: '#24204B' },
+      dark: { default: '#000c0f', paper: '#24204B' },
     },
     divider: { light: 'rgba(0, 0, 0, 0.12)', dark: 'rgba(255, 255, 255, 0.12)' },
     primary: {

@@ -7,6 +7,7 @@ import { useSelector } from "../src/store/reducers";
 import { CssBaseline, StyledEngineProvider } from "@mui/material";
 import { ThemeProvider } from "@mui/material/styles";
 import SnackbarProvider from "../src/providers/SnackbarProvider";
+import "../src/styles/scss/animations.scss"
 import "../src/fonts/fonts.scss";
 import NextError from "../src/sections/NextError";
 import { SWRConfig } from "swr";
@@ -25,6 +26,7 @@ function AppWrapper({ Component, pageProps }) {
     if (jssStyles) {
       jssStyles?.parentElement?.removeChild(jssStyles);
     }
+
     console.log(`
       ███╗   ███╗ ██████╗ ██╗  ██╗███████╗███████╗███╗   ██╗
       ████╗ ████║██╔═══██╗██║  ██║██╔════╝██╔════╝████╗  ██║
@@ -33,9 +35,12 @@ function AppWrapper({ Component, pageProps }) {
       ██║ ╚═╝ ██║╚██████╔╝██║  ██║███████║███████╗██║ ╚████║
       ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝
     `);
+
   }, []);
+
   const settings = useSelector((state) => state.settings);
   const [theme, setTheme] = useState(createCustomTheme(settings.theme));
+
   useEffect(() => {
     const rawTheme = createCustomTheme(settings.theme);
     setTheme(rawTheme);
@@ -44,8 +49,8 @@ function AppWrapper({ Component, pageProps }) {
   return(
       <>
         <NextHead>
-          <title>Torgay</title>
-          <link rel="icon" href="/static/images/favicon.ico" />
+          <title>Mohsen Mohseni</title>
+          <link rel="icon" href="/static/images/favicon-16x16.ico" />
         </NextHead>
 
         <PersistGate

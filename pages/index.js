@@ -1,3 +1,4 @@
+import { Typography } from '@mui/material'
 import Head from 'next/head'
 
 export default function Home() {
@@ -11,7 +12,7 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>Mohsen Mohseni</h1>
+        <Typography variant='h1' className='homeTitle' >Mohsen Mohseni</Typography>
       </main>
 
       <footer></footer>
