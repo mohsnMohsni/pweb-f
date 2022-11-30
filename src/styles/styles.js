@@ -134,6 +134,24 @@ const baseOptions = {
       fontWeight: 500,
       textTransform: "capitalize",
     },
+    colorizeText: {
+      color: 'rgba(255, 255, 255, .1)',
+      background: `linear-gradient(
+        to right,
+        rgb(76, 217, 105),
+        rgb(52, 170, 220),
+        rgb(88, 86, 217),
+        rgb(255, 45, 83),
+        rgb(255, 45, 83),
+        rgb(88, 86, 217),
+        rgb(52, 170, 220),
+        rgb(76, 217, 105)
+      )`,
+      backgroundSize: '400%',
+      backgroundClip: 'text',
+      fontWeight: 900,
+      animation: 'rgbTransition 10s linear infinite',
+    },
     overline: {
       fontSize: "0.68rem",
       fontFamily: fonts.fa.textLight,

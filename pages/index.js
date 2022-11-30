@@ -1,4 +1,4 @@
-import { Typography } from '@mui/material'
+import { Typography, Box } from '@mui/material'
 import Head from 'next/head'
 
 export default function Home() {
@@ -11,9 +11,9 @@ export default function Home() {
         <link rel="icon" href="/static/images/favicon-16x16.ico" />
       </Head>
 
-      <main className='container'>
-        <Typography variant='h1' className='homeTitle' >Mohsen Mohseni</Typography>
-      </main>
+      <Box component='main' sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
+        <Typography variant='colorizeText' sx={{ fontSize: '10vw', width: '80%'}} >Mohsen Mohseni</Typography>
+      </Box>
 
       <footer></footer>
     </div>
