@@ -1,5 +1,4 @@
 import useSWR from "swr";
-import { useDispatch } from "react-redux";
 
 import { onOpen } from "../store/reducers/Notification";
 import { handleStatusSuccess } from "../feature/function";
@@ -9,7 +8,6 @@ const SWRWrapper = (props) => {
   /******************************************************************************
    *                            STORE
    *****************************************************************************/
-  const dispatch = useDispatch();
 
   /******************************************************************************
    *                            SWR
@@ -18,10 +16,7 @@ const SWRWrapper = (props) => {
 
   if (error || (data?.status && !handleStatusSuccess(data?.status))) {
     dispatch(
-      onOpen({
-        message: error?.message || data?.response?.data?.msg,
-        severity: "error",
-      })
+      'err'
     );
   }
 

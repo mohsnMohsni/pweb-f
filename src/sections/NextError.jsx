@@ -1,9 +1,7 @@
 import Error from "next/error";
-import { useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
 
 import { PAGE_HAS_ERROR_CODE } from "../constants/env";
-import { onOpen } from "../store/reducers/Notification";
 
 
 const NextError = (props) => {
@@ -26,14 +24,7 @@ const NextError = (props) => {
       return true;
     } else {
       if (typeof window !== "undefined") {
-        dispatch(
-          onOpen({
-            message:
-              `${props?.data?.errorCode ? "(" + props?.data?.errorCode + ")" : ""
-              } ${props?.data?.errorMsg}` || statusText?.defaultErrorText,
-            severity: "error",
-          })
-        );
+        'err'
       }
       return false;
     }
