@@ -1,6 +1,7 @@
 import useSWRInfinite  from "swr/infinite";
-import { onOpen } from "../store/reducers/Notification";
 import { useDispatch } from "react-redux";
+
+import { onOpen } from "../store/reducers/Notification";
 import { handleStatusSuccess } from "../feature/function";
 
 const SWRInfiniteWrapper = (props) => {

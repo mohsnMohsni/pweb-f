@@ -1,6 +1,7 @@
 import useSWR from "swr";
-import { onOpen } from "../store/reducers/Notification";
 import { useDispatch } from "react-redux";
+
+import { onOpen } from "../store/reducers/Notification";
 import { handleStatusSuccess } from "../feature/function";
 
 const SWRWrapper = (props) => {

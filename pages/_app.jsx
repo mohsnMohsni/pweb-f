@@ -1,17 +1,18 @@
-import React, { useState, useEffect } from "react";
-import { PersistGate } from "redux-persist/integration/react";
+import React, { useEffect } from "react";
 import NextHead from "next/head";
+import { SWRConfig } from "swr";
+import { PersistGate } from "redux-persist/integration/react";
+import { CssBaseline, StyledEngineProvider } from "@mui/material";
+import { ThemeProvider } from "@mui/material/styles";
+import { CacheProvider } from '@emotion/react';
+
 import { persistor, wrapperRedux } from "../src/store/store";
 import { createCustomTheme } from "../src/styles/styles";
 import { useSelector } from "../src/store/reducers";
-import { CssBaseline, StyledEngineProvider } from "@mui/material";
-import { ThemeProvider } from "@mui/material/styles";
 import SnackbarProvider from "../src/providers/SnackbarProvider";
-import { CacheProvider } from '@emotion/react';
 import "../src/styles/scss/animations.scss"
 import "../src/fonts/fonts.scss";
 import NextError from "../src/sections/NextError";
-import { SWRConfig } from "swr";
 import { _http } from "../src/services/http";
 import createEmotionCache from '../src/createEmotionCache';
 
@@ -22,22 +23,21 @@ const clientSideEmotionCache = createEmotionCache();
 function AppWrapper({ Component, emotionCache = clientSideEmotionCache, pageProps }) {
   const getLayout = Component.getLayout ?? ((page) => page);
 
-  console.log(`
+  useEffect(() =>
+    console.log(`
       ███╗   ███╗ ██████╗ ██╗  ██╗███████╗███████╗███╗   ██╗
       ████╗ ████║██╔═══██╗██║  ██║██╔════╝██╔════╝████╗  ██║
       ██╔████╔██║██║   ██║███████║███████╗█████╗  ██╔██╗ ██║
       ██║╚██╔╝██║██║   ██║██╔══██║╚════██║██╔══╝  ██║╚██╗██║
       ██║ ╚═╝ ██║╚██████╔╝██║  ██║███████║███████╗██║ ╚████║
       ╚═╝     ╚═╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝  ╚═══╝
-    `);
+    `),
+    []
+  )
+
 
   const settings = useSelector((state) => state.settings);
-  const [theme, setTheme] = useState(createCustomTheme(settings.theme));
-
-  useEffect(() => {
-    const rawTheme = createCustomTheme(settings.theme);
-    setTheme(rawTheme);
-  }, [settings.theme]);
+  const theme = createCustomTheme(settings.theme);
 
   return (
     <>

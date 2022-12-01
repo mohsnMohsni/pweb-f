@@ -1,5 +1,5 @@
-import { Typography, Box } from '@mui/material'
 import Head from 'next/head'
+import { Typography, Box } from '@mui/material'
 
 export default function Home() {
 
@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
 
       <Box component='main' sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-        <Typography variant='colorizeText' sx={{ fontSize: '10vw', width: '80%'}} >Mohsen Mohseni</Typography>
+        <Typography variant='colorizeText' sx={{ fontSize: '10vw', width: '80%' }} >Mohsen Mohseni</Typography>
       </Box>
 
       <footer></footer>

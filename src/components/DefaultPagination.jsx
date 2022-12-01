@@ -1,5 +1,5 @@
-import React  from "react";
-import { Pagination,  } from "@mui/lab";
+import React from "react";
+import { Pagination, } from "@mui/lab";
 import { makeStyles } from "@mui/styles";
 
 const DefaultPagination = (props) => {

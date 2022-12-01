@@ -9,7 +9,9 @@ const FlexCenter = styled(Box)({
   flexDirection: 'column',
   paddingTop: 80,
 });
+
 class ErrorPage extends React.Component {
+
   static getInitialProps({ res, err }) {
     const statusCode = res ? res.statusCode : err ? err.statusCode : null;
     return { statusCode };
@@ -24,4 +26,5 @@ class ErrorPage extends React.Component {
     );
   }
 }
+
 export default ErrorPage;

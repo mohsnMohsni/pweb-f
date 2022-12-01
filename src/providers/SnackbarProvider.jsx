@@ -1,7 +1,8 @@
 // provider for snack bar notification
-import { Alert, Box, Snackbar } from "@mui/material";
 import * as React from "react";
-import {  useDispatch, useSelector } from "../../src/store/reducers";
+import { Alert, Box, Snackbar } from "@mui/material";
+
+import { useDispatch, useSelector } from "../../src/store/reducers";
 import { onClose } from "../../src/store/reducers/Notification";
 
 /******************************************************************************

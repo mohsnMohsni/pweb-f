@@ -1,7 +1,7 @@
 import { makeStyles } from "@mui/styles";
-import {  Typography } from "@mui/material";
+import { Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import {useTranslation} from "react-i18next";
+import { useTranslation } from "react-i18next";
 
 
 const NotFound = (props) => {

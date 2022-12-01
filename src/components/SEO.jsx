@@ -14,7 +14,7 @@ export const defaultSeo = {
   article: false,
 };
 
-const Seo= ({
+const Seo = ({
   metaTitle = defaultSeo.metaTitle,
   metaDescription = defaultSeo.metaDescription,
   shareImage = defaultSeo.shareImage,

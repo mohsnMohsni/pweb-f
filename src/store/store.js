@@ -14,6 +14,7 @@ import {
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
 import { encryptTransform } from "redux-persist-transform-encrypt";
+
 import watcherSaga from "./sagas";
 import rootReducer from "./reducers";
 import createSagaMiddleware from "@redux-saga/core";
