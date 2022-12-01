@@ -1,4 +1,5 @@
 module.exports = {
+  productionBrowserSourceMaps: true,
   env: {},
   images: {},
   webpack5: true,
