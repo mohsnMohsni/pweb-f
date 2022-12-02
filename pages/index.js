@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import { Typography, Box } from '@mui/material'
 
-export default function Home() {
+
+export default function Home({ setIsLoading }) {
 
   return (
     <div >
