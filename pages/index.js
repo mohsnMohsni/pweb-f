@@ -1,8 +1,13 @@
 import Head from 'next/head'
+import { useState } from 'react'
 import { Typography, Box } from '@mui/material'
 
+import MenuWIthBackdrop from '../src/components/MenuWithBackdrop'
 
 export default function Home({ setIsLoading }) {
+
+  const [openMenu, setOpenMenu] = useState(false)
+
 
   return (
     <div >
@@ -12,8 +17,19 @@ export default function Home({ setIsLoading }) {
         <link rel="icon" href="/static/images/favicon-16x16.ico" />
       </Head>
 
-      <Box component='main' sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}>
-        <Typography variant='colorizeText' sx={{ fontSize: '10vw', width: '80%' }} >Mohsen Mohseni</Typography>
+      <MenuWIthBackdrop open={openMenu} setOpen={setOpenMenu} />
+
+      <Box
+        component='main'
+        sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', height: '100vh' }}
+      >
+        <Typography
+          variant='colorizeText'
+          sx={{ fontSize: '10vw', width: '80%', cursor: 'pointer' }}
+          onClick={() => setOpenMenu(true)}
+        >
+          Mohsen Mohseni
+        </Typography>
       </Box>
 
       <footer></footer>
