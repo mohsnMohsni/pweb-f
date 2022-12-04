@@ -3,8 +3,8 @@ module.exports = {
   env: {},
   images: {},
   webpack5: true,
-  i18n: {
-    locales: ['en', 'fa'],
-    defaultLocale: 'fa',
-  },
+  // i18n: {
+  //   locales: ['en', 'fa'],
+  //   defaultLocale: 'fa',
+  // },
 };
