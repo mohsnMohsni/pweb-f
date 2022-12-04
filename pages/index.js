@@ -25,7 +25,7 @@ export default function Home({ setIsLoading }) {
       >
         <Typography
           variant='colorizeText'
-          sx={{ fontSize: '10vw', width: '80%', cursor: 'pointer' }}
+          sx={{ fontSize: '10vw', width: '82%', cursor: 'pointer' }}
           onClick={() => setOpenMenu(true)}
         >
           Mohsen Mohseni

@@ -5,8 +5,8 @@
 
 export const fonts = {
   fa: {
-    title: 'pacifico',
-    text: 'pacifico',
-    textLight: 'pacifico',
+    title: 'sans-serif',
+    text: 'sans-serif',
+    textLight: 'sans-serif',
   },
 };
