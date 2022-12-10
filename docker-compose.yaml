@@ -5,5 +5,5 @@ services:
     build: .
     ports:
       - "127.0.0.1:3000:3000"
-    env_file:
-      - ./envs/.env.production
+    environment:
+      - NEXT_PUBLIC_API_URL: ${NEXT_PUBLIC_API_URL}
